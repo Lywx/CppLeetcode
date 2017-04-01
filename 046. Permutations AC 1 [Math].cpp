@@ -24,15 +24,15 @@ public:
     vector<vector<int>> permute(vector<int>& nums)
     {
         auto permutationNum = factorial(nums.size());
-        vector<vector<int>> permutation;
+        vector<vector<int>> permutationList;
         while(permutationNum > 0)
         {
-            permutation.push_back(nums);
+            permutationList.push_back(nums);
             --permutationNum;
 
             next_permutation(nums.begin(), nums.end());
         }
 
-        return permutation;
+        return permutationList;
     }
 };
